@@ -9,7 +9,10 @@ function App() {
 	return (
 		<markDownContext.Provider value={contextValue}>
 			<div className="flex flex-col w-screen h-screen font-lato">
-				<div className="w-full py-4 text-4xl text-center">Markdown Editor</div>
+				<div className="relative flex items-center w-full p-4">
+					<span className="flex-grow text-4xl text-center">Markdown Editor</span>
+					<a className="absolute right-10" href="http://www.markdownguide.org/basic-syntax/" target="__blank">see basic syntax</a>
+				</div>
 				<div className="flex w-full h-full p-4">
 					<RawInputArea />
 					<MarkdownSanitized />
